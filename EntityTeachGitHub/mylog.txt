@@ -1,0 +1,184 @@
+dbug: 21.11.2024 02:04:55.141 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 9.0.0 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.0' with options: EngineType=SqlServer 
+dbug: 21.11.2024 02:04:55.146 RelationalEventId.ConnectionCreating[20005] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Creating DbConnection.
+dbug: 21.11.2024 02:04:55.146 RelationalEventId.ConnectionCreated[20006] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Created DbConnection. (0ms).
+dbug: 21.11.2024 02:04:55.146 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.147 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.147 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 21.11.2024 02:04:55.147 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 21.11.2024 02:04:55.147 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 21.11.2024 02:04:55.147 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+info: 21.11.2024 02:04:55.147 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+dbug: 21.11.2024 02:04:55.147 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.147 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB' (0ms).
+dbug: 21.11.2024 02:04:55.147 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteScalar'.
+dbug: 21.11.2024 02:04:55.147 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteScalar' (0ms).
+dbug: 21.11.2024 02:04:55.147 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Initialized DbCommand for 'ExecuteScalar' (0ms).
+dbug: 21.11.2024 02:04:55.147 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.147 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.147 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      
+      IF EXISTS
+          (SELECT *
+           FROM [sys].[objects] o
+           WHERE [o].[type] = 'U'
+           AND [o].[is_ms_shipped] = 0
+           AND NOT EXISTS (SELECT *
+               FROM [sys].[extended_properties] AS [ep]
+               WHERE [ep].[major_id] = [o].[object_id]
+                   AND [ep].[minor_id] = 0
+                   AND [ep].[class] = 1
+                   AND [ep].[name] = N'microsoft_database_tools_support'
+          )
+      )
+      SELECT 1 ELSE SELECT 0
+info: 21.11.2024 02:04:55.149 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      
+      IF EXISTS
+          (SELECT *
+           FROM [sys].[objects] o
+           WHERE [o].[type] = 'U'
+           AND [o].[is_ms_shipped] = 0
+           AND NOT EXISTS (SELECT *
+               FROM [sys].[extended_properties] AS [ep]
+               WHERE [ep].[major_id] = [o].[object_id]
+                   AND [ep].[minor_id] = 0
+                   AND [ep].[class] = 1
+                   AND [ep].[name] = N'microsoft_database_tools_support'
+          )
+      )
+      SELECT 1 ELSE SELECT 0
+dbug: 21.11.2024 02:04:55.149 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.149 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB' (0ms).
+dbug: 21.11.2024 02:04:55.150 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.150 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.150 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 21.11.2024 02:04:55.150 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 21.11.2024 02:04:55.150 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Initialized DbCommand for 'ExecuteReader' (0ms).
+dbug: 21.11.2024 02:04:55.150 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Age], [u].[Name], [u].[Position]
+      FROM [Users] AS [u]
+info: 21.11.2024 02:04:55.150 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[Age], [u].[Name], [u].[Position]
+      FROM [Users] AS [u]
+dbug: 21.11.2024 02:04:55.150 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 21.11.2024 02:04:55.150 RelationalEventId.DataReaderClosing[20301] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Closing data reader to 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.150 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader for 'HelloApp' on server '(localdb)\MSSQLLocalDB' is being disposed after spending 0ms reading results.
+dbug: 21.11.2024 02:04:55.150 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.150 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB' (0ms).
+dbug: 21.11.2024 02:04:55.151 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'User' tracked by 'ApplicationContext' changed state from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 21.11.2024 02:04:55.151 CoreEventId.SaveChangesStarting[10004] (Microsoft.EntityFrameworkCore.Update) 
+      SaveChanges starting for 'ApplicationContext'.
+dbug: 21.11.2024 02:04:55.151 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'ApplicationContext'.
+dbug: 21.11.2024 02:04:55.152 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'ApplicationContext'.
+dbug: 21.11.2024 02:04:55.154 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.154 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.154 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 21.11.2024 02:04:55.154 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 21.11.2024 02:04:55.154 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Initialized DbCommand for 'ExecuteReader' (0ms).
+dbug: 21.11.2024 02:04:55.154 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET IMPLICIT_TRANSACTIONS OFF;
+      SET NOCOUNT ON;
+      DELETE FROM [Users]
+      OUTPUT 1
+      WHERE [Id] = @p0;
+info: 21.11.2024 02:04:55.155 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET IMPLICIT_TRANSACTIONS OFF;
+      SET NOCOUNT ON;
+      DELETE FROM [Users]
+      OUTPUT 1
+      WHERE [Id] = @p0;
+dbug: 21.11.2024 02:04:55.155 RelationalEventId.DataReaderClosing[20301] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Closing data reader to 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.155 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader for 'HelloApp' on server '(localdb)\MSSQLLocalDB' is being disposed after spending 0ms reading results.
+dbug: 21.11.2024 02:04:55.155 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.155 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB' (0ms).
+dbug: 21.11.2024 02:04:55.157 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'User' tracked by 'ApplicationContext' changed state from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 21.11.2024 02:04:55.157 CoreEventId.SaveChangesCompleted[10005] (Microsoft.EntityFrameworkCore.Update) 
+      SaveChanges completed for 'ApplicationContext' with 1 entities written to the database.
+dbug: 21.11.2024 02:04:55.157 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.157 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.157 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 21.11.2024 02:04:55.157 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 21.11.2024 02:04:55.157 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Initialized DbCommand for 'ExecuteReader' (0ms).
+dbug: 21.11.2024 02:04:55.157 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[Age], [u].[Name], [u].[Position]
+      FROM [Users] AS [u]
+info: 21.11.2024 02:04:55.157 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[Age], [u].[Name], [u].[Position]
+      FROM [Users] AS [u]
+dbug: 21.11.2024 02:04:55.158 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 21.11.2024 02:04:55.158 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 21.11.2024 02:04:55.158 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 21.11.2024 02:04:55.158 RelationalEventId.DataReaderClosing[20301] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Closing data reader to 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.158 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader for 'HelloApp' on server '(localdb)\MSSQLLocalDB' is being disposed after spending 0ms reading results.
+dbug: 21.11.2024 02:04:55.158 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.158 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB' (0ms).
+dbug: 21.11.2024 02:04:55.158 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'ApplicationContext' disposed.
+dbug: 21.11.2024 02:04:55.158 RelationalEventId.ConnectionDisposing[20007] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Disposing connection to database 'HelloApp' on server '(localdb)\MSSQLLocalDB'.
+dbug: 21.11.2024 02:04:55.158 RelationalEventId.ConnectionDisposed[20008] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Disposed connection to database '' on server '' (0ms).
