@@ -9,15 +9,35 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Logging; //Для управлением базы данных
-
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using System.Diagnostics.Metrics;
 
 //CRUD операции - create, read, update, delete
+
 public class User
 {
     public int Id { get; set; }
     public string? Name { get; set; }
     public int Age { get; set; }
     public string? Position { get; set; }
+
+    public User(int Id, string?  Name, int Age, string? Position)
+    {
+        this.Id = Id;
+        this.Name = Name;
+        this.Age = Age;
+        this.Position = Position;
+    }
+
+    public User() { }
+}
+
+public class Country
+{
+    public int Id { get; set; }
+    public string? Name { get; set; }
 }
 
 //DbContext - контекст данных для взаимодействия с бд
@@ -34,7 +54,7 @@ public class ApplicationContext : DbContext
     //Database.EnsureDeleted гарантирует удаление БД 
     public ApplicationContext(string _connectionstring) //Благодаря этого у нас будет всегда чистая БД при запуске
     {
-        //Database.EnsureDeleted(); // гарантируем, что бд удалена
+        Database.EnsureDeleted(); // гарантируем, что бд удалена
         Database.EnsureCreated(); // гарантируем, что бд будет создана
         this._connectionString = _connectionstring;
     }
@@ -44,6 +64,16 @@ public class ApplicationContext : DbContext
     {
         optionsBuilder.UseSqlServer(_connectionString);
         optionsBuilder.LogTo(logStream.WriteLine, LogLevel.Debug); //Логирование в файл
+    }
+
+    //FluentAPI
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        // использование Fluent API
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<Country>();//Включаем Country В наше БД
+        //modelBuilder.Ignore<Country>(); Это если надо наоборот проигнорировать, что бы в БД не добавлялось
+        modelBuilder.Entity<User>().Ignore(u => u.Position); //Position не будет в БД
     }
 
     public override void Dispose() //Для утилизации файлового потока для логирования
@@ -85,7 +115,7 @@ class Programm
     {
         using (ApplicationContext db = new ApplicationContext("Server=(localdb)\\MSSQLLocalDB;Database=HelloApp;Trusted_Connection=True;"))
         {
-            //db.Database.Migrate(); - при измении применть для миграции
+            //db.Database.Migrate(); 
 
             //CanConnect - доступна ли БД
             bool isAvalaible = db.Database.CanConnect();
@@ -122,7 +152,7 @@ class Programm
                 user.Name = "Bob";
                 user.Age = 44;
                 //обновляем объект
-                //db.Users.Update(user);
+                db.Users.Update(user);
                 db.SaveChanges();
             }
             // выводим данные после обновления
